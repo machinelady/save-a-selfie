@@ -11,7 +11,7 @@ Retrieving all entries from the database is done by sending a GET request to
 `/entries/`.
 
 If there are no entries in the database, the server will send a 204 status;
-otherwise, it will return a JSON array of entries. Each entry is represented as a dictionary
+otherwise, it will return a JSON array for all entries. Each entry is represented as a dictionary
 with the following keys:
     id,
     latitude,
@@ -21,13 +21,25 @@ with the following keys:
     comment,
     kind
 
+Retrieve the metadata of all entries
+------------------------------------
+
+To retrieve only the metadata of all database entries (without image data), send a GET request to `/entries/metadata/`.
+This will return a 204 if the database is empty, and a JSON array of dictionaries with the following keys:
+    id,
+    latitude,
+    longitude,
+    uploadedby,
+    comment,
+    kind
+
 
 Retrieve all entries of one kind
 --------------------------------
 
 To retrieve all entries of a particular kind, e.g. all entries for AEDs, send a GET request to
 `/entries/$kind`. If there are no entries of that kind in the database, the server will send a 204; 
-otherwise, it will return the requested entries as a JSON array as described above.
+otherwise, it will return the requested entries as a JSON array as described in "Retrieve all entries".
 
 Create a new entry
 ------------------

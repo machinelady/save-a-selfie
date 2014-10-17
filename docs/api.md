@@ -56,7 +56,7 @@ To create a new entry, send a POST request to `/entries/` with the following par
 `image` and `thumbnail` should be sent as base-64 encoded strings. `uploadedby` should contain a uniquely identifiable user ID, but can be left empty in case of anonymous upload.`comment` is a user comment that clarifies the location of the AED/other resource, e.g. "on the ground floor to the left of reception desk". `kind` is the kind of object that appears in the selfie. The following strings should be used for the `kind` property: 
 
 Object          |  `kind`
--------------------------
+----------------|--------
 Defibrillator   | AED
 
 (to be extended)

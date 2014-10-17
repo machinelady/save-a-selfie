@@ -66,9 +66,9 @@ To delete an entry with ID $num, send a DELETE request to `/entries/$num`.
 Find entries near a particular location
 -----------------------------------------
 
-To find entries near the location ($latitude, $longitude), send a GET request to `/entries/near/$latitude,$longitude`. If you want to find entries within $distance km from the given location, the request URL is `/entries/near/$latitude,$longitude,$distance`. The entries will be returned as a JSON array of dictionaries. By default, this will give you the 10 closest entries, but you can get the N closest entries by appending `+N` to the URL, as in `/entries/near/$latitude,$longitude+N/`.
+To find entries near the location ($latitude, $longitude), send a GET request to `/entries/near/$latitude,$longitude`. If you want to find entries within $distance km from the given location, the request URL is `/entries/near/$latitude,$longitude,$distance`. The entries will be returned as a JSON array of dictionaries. By default, this will give you the 10 closest entries, but you can get the N closest entries by appending `+N` to the URL, as in `/entries/near/$latitude,$longitude+N`.
 
-To these URLs, `/$kind/` can be appended if you want to find all the entries for a particular kind of object near a given location.
+To these URLs, `/$kind` can be appended if you want to find all the entries for a particular kind of object near a given location.
 
 
 
